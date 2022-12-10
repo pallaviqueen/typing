@@ -173,17 +173,19 @@ $(document).ready(function() {
         $(this).on('click',function(e) {
             Level = $(this).attr('id');
             // Not Working
+            /*
             $('.timerDisplay').html('00 : 00 : 00');
             $('.keyboard > .row > .active').removeClass('active');
             $(`.sidebar > .level-active`).removeClass('level-active');
             currLevel = Level.slice(5);
             localStorage.setItem('Curr_Level',Level.slice(5));
             main(Basics[`Level ${localStorage.getItem('Curr_Level')}`]);
+            */
             // Working (Try commenting ☝️ upper lines and decommenting 👇 lower lines)
-            /*
+            
             localStorage.setItem('Curr_Level',Level.slice(5));
             window.location.reload();
-            */
+            
         })
     });
 })
