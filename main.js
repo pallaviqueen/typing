@@ -1,6 +1,5 @@
 $(document).ready(function() {
     let currLevel = localStorage.getItem('Curr_Level') ? Number(localStorage.getItem('Curr_Level')) : localStorage.setItem('Curr_Level',1);
-    //console.log(localStorage.getItem('Curr_Level'))
     const Basics = {
         'Level 1' : [['f','j','d','k','f','j','d','k','f'],['j','d','k']],
         'Level 2' : [['s','l','a',';','s','l','a',';','s'],['l','a',';']],
@@ -26,12 +25,13 @@ $(document).ready(function() {
         '.' : 'fullstop',
         '/' : 'slash',
     }
+    let int = null;  
     function main(data) {
          let curr = 1;
          let started = 1;
          let [max,CurrArray,totalWords,totalIncorrect,milliseconds,seconds,minutes,hours] = [0,0,0,0,0,0,0,0];
          let timerRef = document.querySelector('.timerDisplay');  
-         let int = null;  
+         
          let finished = false;
          const keyWord = (str) => /^[A-Za-z0-9]*$/.test(str) ? str : keywords[String(str)];
          $(`#level${currLevel}`).addClass('level-active');
@@ -73,15 +73,12 @@ $(document).ready(function() {
                  started = 0;
              }       
              if (CurrArray <= data.length && !finished) {
-                //console.log(e.key,data[CurrArray-1][curr-1])
                  if (e.key == data[CurrArray-1][curr-1]) {
                      $(`.${curr}`).children().removeClass('incorrect').addClass('correct');
-                     //console.log(curr,data[CurrArray][curr-1])
                      $(`#${keyWord(data[CurrArray-1][curr-1])}`).removeClass('active');
                      if (curr != max) {
                          curr += 1;
                          $(`.active`).remove();
-                         //console.log(keyWord(data[CurrArray-1][curr-1]))
                          $(`#${keyWord(data[CurrArray-1][curr-1])}`).addClass('active');
                          $(`.${curr}`).append('<div class="active"></div>');
      
@@ -172,20 +169,13 @@ $(document).ready(function() {
     $('.levels').each(function (e) {
         $(this).on('click',function(e) {
             Level = $(this).attr('id');
-            // Not Working
-            /*
             $('.timerDisplay').html('00 : 00 : 00');
             $('.keyboard > .row > .active').removeClass('active');
-            $(`.sidebar > .level-active`).removeClass('level-active');
-            currLevel = Level.slice(5);
+            $('.sidebar > .level-active').removeClass('level-active');
             localStorage.setItem('Curr_Level',Level.slice(5));
+            $('body').unbind("keypress");
+            clearInterval(int);
             main(Basics[`Level ${localStorage.getItem('Curr_Level')}`]);
-            */
-            // Working (Try commenting ☝️ upper lines and decommenting 👇 lower lines)
-            
-            localStorage.setItem('Curr_Level',Level.slice(5));
-            window.location.reload();
-            
         })
     });
 })
