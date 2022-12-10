@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FAF9F6;
+    user-select: none;
+}
+
+.instruction {
+    height: calc(20vh);
+    width: calc(50vw);
+    position: absolute;
+    left: 50%;
+    margin: calc(10vh) 0 0 -25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.instruction .i-row {
+    margin: 2.5vh 1.25vh 0 1.25vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.instruction .i-row .btn-box {
+    height: 100%;
+    width: 60px;
+    margin: 0 5px 0 5px;
+}
+
+.instruction .i-row .btn-box:first-child {
+    margin: 0 5px 0 1.5px;
+}
+
+.instruction .i-row .btn {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(213, 212, 212);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(142, 142, 142);
+    font-size: 25px;
+}
+
+.instruction .i-row .correct {
+    background-color: #e2f7e2;
+    color: #10c373;
+    animation: Scale 0.5s;
+    transition: 0.5s ease-in-out;
+}
+
+@keyframes Scale {
+    0% { transform: scale(0.98);}
+    50% { transform: scale(0.95);}
+    100% { transform: scale(1);}
+}
+
+.instruction .i-row .incorrect {
+    animation: horizontal-shaking 0.5s,color 1s;
+}
+
+.instruction .i-row .incorrect2 {
+    animation: horizontal-shaking 0.5s,color 1s;
+}
+
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(3px) }
+    50% { transform: translateX(-3px) }
+    75% { transform: translateX(3px) }
+    100% { transform: translateX(0) }
+}
+
+@keyframes color {
+    0% {
+        background-color: #f5687c;
+        color:#fff;
+    }
+    80% {
+        background-color: #f5687c;
+        color:#fff;
+    }
+    100% {
+        background-color: #ffffff;
+        color:rgb(142, 142, 142);
+    }
+}
+
+.instruction .active {
+    height: 4px;
+    width: 60px;
+    margin-top: 10px;
+    background-color: rgb(137, 137, 255);
+}
+
+.keyboard {
+    height: calc(40vh + 15px);
+    width: calc(50vw);
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(211, 211, 211);
+    box-shadow: 0px 0px 2px 2px rgb(237, 237, 237);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15vh 0 0 -25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.keyboard .row {
+    margin: 4px 7.5px 0 7.5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.keyboard .row:first-child {
+    margin-top: 15px;
+}
+
+.keyboard .row .btn1,.btn2,.btn3,.btn4,.btn5 {
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 1.5px 0 1.5px;
+    border: 1px solid rgb(213, 212, 212);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(142, 142, 142);
+    font-size: 15px;
+}
+
+.keyboard .row .active {
+    background-color: rgb(137, 137, 255);
+    color: #fff;
+}
+
+.keyboard .row .btn2 {
+    width: 60px;
+}
+
+.keyboard .row .btn3 {
+    width: 70px;
+}
+
+.keyboard .row .btn4 {
+    width: 82px;
+}
+
+.keyboard .row .btn5 {
+    width: 240px;
+    margin: auto;
+}
+
+.timerDisplay {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    margin: 30px 0 0 calc(80vw);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(142, 142, 142);
+    border: 1px solid rgb(222, 222, 222);
+    box-shadow: 0 0 2px 2px rgb(240, 240, 240);
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Roboto Mono";
+}

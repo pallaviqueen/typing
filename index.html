@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <title>Typing Test</title>
+</head>
+<body>
+    <ul class="sidebar">
+        <h1>Levels</h1>
+        <li class="levels" id="level1">Level 1</li>
+        <li class="levels" id="level2">Level 2</li>
+        <li class="levels" id="level3">Level 3</li>
+        <li class="levels" id="level4">Level 4</li>
+        <li class="levels" id="level5">Level 5</li>
+        <li class="levels" id="level6">Level 6</li>
+        <li class="levels" id="level7">Level 7</li>
+        <li class="levels" id="level8">Level 8</li>
+        <li class="levels" id="level9">Level 9</li>
+        <li class="levels" id="level10">Level 10</li>       
+    </ul>
+    <div class="instruction">
+        <div class="i-row">
+
+        </div>
+        
+    </div>
+    <div class="timerDisplay">
+        00 : 00 : 00
+    </div>
+    <div class="keyboard">
+        <div class="row">
+            <div class="btn1" id="apostrophe">`</div>
+            <div class="btn1" id="1">1</div>
+            <div class="btn1" id="2">2</div>
+            <div class="btn1" id="3">3</div>
+            <div class="btn1" id="4">4</div>
+            <div class="btn1" id="5">5</div>
+            <div class="btn1" id="6">6</div>
+            <div class="btn1" id="7">7</div>
+            <div class="btn1" id="8">8</div>
+            <div class="btn1" id="9">9</div>
+            <div class="btn1" id="0">0</div>
+            <div class="btn1" id="minux">-</div>
+            <div class="btn1" id="equalto">=</div>
+            <div class="btn2" id="backspace" style="font-size:10px">Backspace</div>
+        </div>
+        <div class="row">
+            <div class="btn2" id="tab">Tab</div>
+            <div class="btn1" id="q">q</div>
+            <div class="btn1" id="w">w</div>
+            <div class="btn1" id="e">e</div>
+            <div class="btn1" id="r">r</div>
+            <div class="btn1" id="t">t</div>
+            <div class="btn1" id="y">y</div>
+            <div class="btn1" id="u">u</div>
+            <div class="btn1" id="i">i</div>
+            <div class="btn1" id="o">o</div>
+            <div class="btn1" id="p">p</div>
+            <div class="btn1" id="leftsqbracket">[</div>
+            <div class="btn1" id="rightsqbracket">]</div>
+            <div class="btn1" id="backslash">\</div>
+        </div>
+        <div class="row">
+            <div class="btn3" id="capslk">CapsLk</div>
+            <div class="btn1" id="a">a</div>
+            <div class="btn1" id="s">s</div>
+            <div class="btn1" id="d">d</div>
+            <div class="btn1" id="f">f</div>
+            <div class="btn1" id="g">g</div>
+            <div class="btn1" id="h">h</div>
+            <div class="btn1" id="j">j</div>
+            <div class="btn1" id="k">k</div>
+            <div class="btn1" id="l">l</div>
+            <div class="btn1" id="semicolon">;</div>
+            <div class="btn1" id="singlequota">'</div>
+            <div class="btn3" id="enter">Enter</div>
+        </div>
+        <div class="row">
+            <div class="btn4" id="shift">Shift</div>
+            <div class="btn1" id="z">z</div>
+            <div class="btn1" id="x">x</div>
+            <div class="btn1" id="c">c</div>
+            <div class="btn1" id="v">v</div>
+            <div class="btn1" id="b">b</div>
+            <div class="btn1" id="n">n</div>
+            <div class="btn1" id="m">m</div>
+            <div class="btn1" id="comma">,</div>
+            <div class="btn1" id="fullstop">.</div>
+            <div class="btn1" id="slash">/</div>
+            <div class="btn4" id="shift2">Shift</div>
+        </div>
+        <div class="row">
+            <div class="btn5"></div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">X</span>
+            <h1>Result</h1>
+            <div class="modal-inner">
+                <p>Speed : <span class="speed"></span></p>
+                <p>Time : <span class="time"></span></p>
+                <p>Accuracy : <span class="accuracy"></span></p>
+                <div class="modal-button">
+                    <button class="restart">Restart</button>
+                    <button class="next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
